@@ -38,25 +38,35 @@ if type ~=1 && type ~= 2 && type~=3
     return
 end
 %% IQ Normalization + Demodulate
-for k = 1:length(gsFilename)
-    clear s_Data_Norm
-    s_Data_Norm = funcNormDivSeg(abs(s_Data{3,k}), 500000);
-    for i = 1:length(s_Data_Norm)
-        if s_Data_Norm(i) > 0.5
-            s_Data_Norm(i) = 0;
-        else
-            s_Data_Norm(i) = 1;
+if type==1 || type==2
+    for k = 1:length(gsFilename)
+        clear s_Data_Norm flag_cal data1
+        flag_cal = 1; 
+        % normalization
+        s_Data_Norm = funcNormDivSeg(abs(s_Data{3,k}), 500000);
+        data = s_Data_Norm;
+        % demodulate and extract the DC profile
+        data_return =  callDemodulateFunc(data,flag_cal);
+        % extract IV profile
+        data1 = funcCutProfile(data_return,0);
+        % determine the direction of the IV curve; if it is reverse then flip
+        % its direction
+        [B,I] = sort(data1);
+        index = find(I == round(length(data1)/2));
+        percent = index/size(data1,2);
+        if percent < 0.5
+            flag_cal = 0;
+            data_return = callDemodulateFunc(data,flag_cal);
         end
+        % save demodulated IV profile
+        s{1,k} = data_return;
+        x = (0.8/length(data_return)):(0.8/length(data_return)):0.8;
+        figure('color','w')
+        plot(data_return); xlabel('Voltage (V)'); ylabel('Current (uA)');
+        title(num2str(k))
+        % save filename
+        s{2,k} = s_Data{1,k};
     end
-    temp = abs(spectrogram(s_Data_Norm, 1000, 1, 1000, Fs, 'yaxis'));
-    s{1,k} = temp(1,:);
-    
-    figure('color','w')
-    plot(s{1,k});
-    title(num2str(k))
-end
-for k = 1:length(gsFilename)
-    s{2,k} = s_Data{1,k};
 end
 %% IV profile Extraction & Concentration Estimation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,7 +78,7 @@ if type == 1
     p2 =         274;
 end
 %%%%%%%%% AA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-if type==2
+if type == 2
     p1 =      0.2302;
     p2 =       270.6;
 end
