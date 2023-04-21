@@ -1,5 +1,5 @@
 # BioScatter
-BioScatter is a low-power sweat sensing system, which consists of a BioScatter tag and a USRP reader with a laptop. This repository includes four parts: 1) the BioScatter tag's hardware design files (circuit schematic, PCB file, and the program for MSP430 MCU); 2) the BioScatter reader's data collection program (reader.grc) and the data analysis program; 3) a voltage monitoring experiment video; 4) figures that illustrate the flow of experiments, electrode fabrication, the worflow of programs and the experiment setup.
+BioScatter is a low-power sweat sensing system, which consists of a BioScatter tag and a USRP reader with a laptop. This repository includes four parts: 1) the BioScatter tag's hardware design files (circuit schematic, PCB file, and the program for MSP430 MCU); 2) the BioScatter reader's data collection program (reader.grc) and the data analysis program; 3) a voltage monitoring experiment video; 4) figures that illustrate the flow of experiments, electrode fabrication, the workflow of programs and the experiment setup.
 
 The most important file is "BioScatter_Designfiles" and "BioScatter_EmbeddedSystem" program.
 
