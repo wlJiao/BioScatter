@@ -16,3 +16,5 @@ The most important file is "BioScatter_Designfiles" and "BioScatter_EmbeddedSyst
 - The hardware of the reader consists of a USRP N210 SDR, a UBX40 daughterboard, two antennae of 850-950 MHz, and a laptop with Ubuntu OS.
 
 - The folder "ReaderDataAnalysis" is the MATLAB program that takes the collected data from "Reader.grc" as input and outputs the estimated sweat concentration level.
+
+We provide a video of BioScatter hardware prototype and experiment process, which is available at: YouTube https://youtu.be/SeuaicnlDGQ.
