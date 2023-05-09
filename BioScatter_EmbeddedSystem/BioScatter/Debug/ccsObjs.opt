@@ -1,9 +1,0 @@
-"./main.obj"
-"./sysconf.obj"
-"./Communication/Source/communication.obj"
-"./Sensor/Source/sensor.obj"
-"./System/Source/system.obj"
-"./Voltage/Source/voltage.obj"
-"../lnk_msp430fr2355.cmd"
--lfrwp_init.a
--llibc.a
