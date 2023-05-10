@@ -18,7 +18,7 @@ Open the downloaded package and follow the installation instructions to install 
 
 > Please note that if you do not have a connected tag and laptop, you can only build, not flash or debug.
 
-# File Declaration
+# Files Declaration
 
 This section describes only the functions of related folders in the current directory. For descriptions of the program files, please see the `BioScatter/BioScatter_EmbeddedSystem/BioScatter/Readme.md`.
 
