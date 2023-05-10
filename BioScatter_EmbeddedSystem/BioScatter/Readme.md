@@ -29,7 +29,7 @@ The MSP430 will remain in low-power mode LPM3 or LPM4 if there are no tasks in t
 
 The task ID is represented by a number ranging from 0 to 15. During each scheduling, the task with a smaller ID has a higher priority and will be executed first. One ID can correspond to only one task. The system supports a maximum of 16 tasks. In this application scenario, 16 tasks will satisfy our needs. In fact, the system can consist of up to 64 tasks (requiring changes to parts of the system code).
 
-If you want to use a scheduling system, you must include the header file `system.h`.
+If you want to use the scheduling system, you must include the header file `system.h`.
 You also need to create a `sysconf.h` file where you set the total number of tasks by defining `TASK_COUNT` with a macro.
 
 System functions:
