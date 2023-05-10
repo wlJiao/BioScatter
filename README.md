@@ -36,7 +36,7 @@ The folder <Reader Program> includes two files.
   
 ## ReaderDataAnalysis
   
-  The folder <ReaderDataAnalysis> consists of the overall signal processing flow in Matlab.
+  The folder <ReaderDataAnalysis> consists of the overall signal processing flow in Matlab. The required Matlab version is MATLAB R2021b or newer.
   
   - "main.m" is the main function;
   
