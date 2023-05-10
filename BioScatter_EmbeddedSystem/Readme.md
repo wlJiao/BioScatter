@@ -1,4 +1,4 @@
-# Code Composer Studio Installation
+# Installing Code Composer Studio
 ## Download
 Open the following link to download the CCS installation package for the latest Windows version. [CCSTUDIO — Code Composer Studio™ integrated development environment (IDE)](https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-J1VdearkvK/12.3.0/CCS12.3.0.00005_win64.zip). You can also open the following link to select and download the CCS installation package for Windows 12.1.0 or later.
 
