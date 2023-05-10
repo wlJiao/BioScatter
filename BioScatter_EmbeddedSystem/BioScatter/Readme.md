@@ -31,12 +31,12 @@ If you want to use a scheduling system, you must include the header file `system
 You also need to create a `sysconf.h` file where you set the total number of tasks by defining `TASK_COUNT` with a macro.
 
 System functions:
-1. SysInit() must be called at the beginning of the main function.
-2. SysSchedule()  must be called at the ending of the main function.
-3. To register a task with the system through the TskCreate() function, you must provide a task function entry and task ID.
-4. A task can be set to ready state by calling TskSetReady().
-5. TskExit() must be called in each task entry function to indicate that the current task has completed.
+1. `SysInit()` must be called at the beginning of the main function.
+2. `SysSchedule()`  must be called at the ending of the main function.
+3. To register a task with the system through the `TskCreate()` function, you must provide a task function entry and task ID.
+4. A task can be set to ready state by calling `TskSetReady()`.
+5. `TskExit()` must be called in each task entry function to indicate that the current task has completed.
 
 Note:
 1. Task functions cannot contain infinite loops.
-2. If TskExit() is not called in the task function, the task will always be scheduled.
+2. If `TskExit()` is not called in the task function, the task will always be scheduled.
