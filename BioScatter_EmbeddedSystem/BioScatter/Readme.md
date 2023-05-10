@@ -33,7 +33,7 @@ If you want to use the scheduling system, you must include the header file `syst
 You also need to create a `sysconf.h` file where you set the total number of tasks by defining `TASK_COUNT` with a macro.
 
 System functions:
-1. `SysInit()` must be called at the beginning of the main function, it initializes the system and MCU..
+1. `SysInit()` must be called at the beginning of the main function, it initializes the system and MCU.
 2. `SysSchedule()`  must be called at the ending of the main function, after it is invoked, the task registered in the system is scheduled.
 3. To register a task with the system through the `TskCreate()` function, you must provide a task function entry and task ID.
 4. A task can be set to ready state by calling `TskSetReady()`.
