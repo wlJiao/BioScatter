@@ -30,7 +30,11 @@ The folder <Minimal System> contains two data files, two MATLAB function files (
   
 The folder <Reader Program> includes two files.
   
-  - "Reader.grc" can be opened with GNU radio 3.7.11 or newer version.
+  - "Reader.grc" can be opened with GNU radio 3.7.11 or newer version. 
+    
+    -The *required hardwares* include a laptop with Ubuntu OS 18.0.4, a USRP N210 + UBX40 daughter board, two antennae with 860-950MHz working band. 
+    
+    -*Setup flow* 1) Two antennae are connected to the Tx and Rx ports on USRP N210. 2) Connect the laptop and USRP N210 with an Ethernet network cable. 3) Open the Reader.grc program with GNU radio software, and click Run button.
   
   - "figure-data_collection_grc.pdf" is an explanation file about "Reader.grc".
   
