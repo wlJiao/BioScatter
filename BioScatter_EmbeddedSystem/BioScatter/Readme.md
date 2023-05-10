@@ -2,7 +2,7 @@
 
 The whole program consists of the following four parts.
 
-- **Task scheduling system**: It provides the task creation interface for users to use, and the following three module-related tasks are created using the interface provided by it. In addition, it includes several functional interfaces for completing MCU initialization.
+- **Task scheduling system**: It provides the task creation interface for users to use, and the following three module-related tasks are created using the interface provided by it. In addition, it includes several functional interfaces for completing system initialization.
 - **Communication module**: It is responsible for communicating with the reader, providing a communication interface for other modules, and activating the sleeping tag.
 - **Voltage monitoring and calibration module**: During the working period of tag, it completes the monitoring task of the power supply voltage and corrects the voltage of the voltage scanning module in time
 - **Sensor module, or voltage sweep module**: It is responsible for the most important sensing task of tag, controlling the voltage applied to the electrode and completing the voltage sweep work.
@@ -13,7 +13,7 @@ The whole program consists of the following four parts.
 - `Communication` folder: Communication module code. It includes task functions, module initialization functions, communication interface functions, and other functions.
 - `Voltage` folder: Voltage monitoring and calibration module code. It includes task functions and module initialization functions, among other functions.
 - `Sensor` folder: Sensor module code. It includes task functions and module initialization functions, among other functions.
-- `sysconf.h`: The system task scheduling depends on sysconf.h, specifically, on the TASK_COUNT macro defined in the file. TASK_COUNT specifies the total number of tasks on the system and must therefore be defined. 
+- `sysconf.h`: The system task scheduling depends on `sysconf.h`, specifically, on the `TASK_COUNT` macro defined in `sysconf.h`. `TASK_COUNT` specifies the total number of tasks on the system and must therefore be defined. 
   > In addition, since some global variables are required for state switching between modules, we also declare some global variables and macro definitions in this file, which are defined in the `sysconf.c` file.
 - `sysconf.c`: In this file, we define some global variables and macro definitions for each module to use for state switching.
 - `main.c`: Complete system initialization, module initialization, task registration and start system scheduling in the main function.
