@@ -20,6 +20,6 @@ The most important file is `BioScatter_Designfiles` and `BioScatter_EmbeddedSyst
 ## Folders Overview
 - `BioScatter_DesignFiles` is the BioScatter tag's hardware design files, including the circuit diagram, the PCB file.
 - `BioScatter_EmbeddedSystem` is the BioScatter tag's control logic program for MSP430 MCU.
-- `Reader Program` is a GNU radio program for reader, which connects USRP, transmit the carrier to the tag and receive the backscatter signal from tag.   
+- `Reader Program` is a GNU radio program for reader, which is responsible for controlling USRP to send/receive signal, i.e., transmitting the 910MHz carrier to the tag and receiving the backscatter signal from tag.   
 - `ReaderDataAnalysis` consists of the overall signal processing flow in Matlab. The required Matlab version is MATLAB R2021b or newer.
 
